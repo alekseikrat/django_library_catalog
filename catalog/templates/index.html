@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block title %}<title>Електронний каталог</title>{% endblock %}
+
+{% block content %}
+<h1>Електронний каталог</h1>
+
+  <p>Електронний каталог методичного кабінету кафедри вітає вас!</p>
+
+<h2>Загальна інформація</h2>
+
+  <p>Каталог має таку кількість записів:</p>
+  <ul>
+    <li><strong>Книги:</strong> {{ num_books }}</li>
+    <li><strong>Екземпляри:</strong> {{ num_instances }}</li>
+    <li><strong>Доступні екземпляри:</strong> {{ num_instances_available }}</li>
+    <li><strong>Автори:</strong> {{ num_authors }}</li>
+  </ul>
+
+    <p>Ви відвідували цю сторінку {{ num_visits }}{% if num_visits == 1 %} раз{% elif num_visits == 2 or num_visits == 3 or num_visits == 4%} рази{% else %} разів{% endif %}.</p>
+
+{% endblock %}
